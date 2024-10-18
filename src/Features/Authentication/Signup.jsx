@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaGoogle, FaGithub } from "react-icons/fa"; // Import icons
+import { FaGithub } from "react-icons/fa"; // Import icons
 import { useForm } from "react-hook-form";
 import { useSignup } from "./useSignup";
 import MiniLoader from "../../Ui/MiniLoader";
