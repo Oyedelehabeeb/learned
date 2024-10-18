@@ -22,7 +22,7 @@ const LandingPage = () => {
             your career with new skills—anytime, anywhere.
           </p>
           <Link
-            to="/signup"
+            to="/login"
             className="inline-flex items-center px-6 py-3 mt-4 bg-blue-600 rounded-md text-lg hover:bg-blue-700 transition"
           >
             Get Started <FaArrowRight className="ml-2" />
@@ -107,7 +107,7 @@ const LandingPage = () => {
             Sign up now and unlock thousands of courses at your fingertips.
           </p>
           <Link
-            to="/signup"
+            to="/login"
             className="mt-6 inline-block px-8 py-4 bg-white text-blue-600 rounded-md text-lg hover:bg-gray-200 transition"
           >
             Join Now
