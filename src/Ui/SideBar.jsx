@@ -24,7 +24,7 @@ function SideBar() {
         <div className="flex gap-x-4 items-center mb-4">
           <div className="w-16 h-16 rounded-full border-2 border-yellow-400 overflow-hidden">
             <img
-              src={avatar}
+              src={avatar ? avatar : "default-user.jpg"}
               alt={fullname}
               className="w-full h-full object-cover"
             />

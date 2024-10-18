@@ -145,13 +145,6 @@ function SignUp() {
 
         <div className="flex space-x-4 mt-4">
           <button
-            className="flex-1 py-2 px-4 bg-red-600 text-white rounded-md hover:bg-red-700 transition-all"
-            disabled={isLoading}
-          >
-            <FaGoogle className="inline mr-2" /> Google
-          </button>
-
-          <button
             className="flex-1 py-2 px-4 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-all"
             disabled={isLoading}
           >
