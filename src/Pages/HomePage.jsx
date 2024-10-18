@@ -1,9 +1,9 @@
-import Home from "../Features/Home/Home";
+import Dashboard from "../Features/Home/Dashboard";
 
 function HomePage() {
   return (
     <div>
-      <Home />
+      <Dashboard />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Home() {
+function Dashboard() {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Dashboard Header */}
@@ -120,4 +120,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Dashboard;

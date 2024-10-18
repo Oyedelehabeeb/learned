@@ -96,10 +96,10 @@ export async function updateCurrentUser({ password, fullname, avatar }) {
   return updatedUser;
 }
 
-export async function loginWithProvider(provider) {
+export async function loginWithProvider() {
   try {
     const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: provider,
+      provider: "github",
     });
     console.log("Sign in result:", { data, error });
 
