@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { FaGithub } from "react-icons/fa"; // Import icons
 import { useForm } from "react-hook-form";
 import { useSignup } from "./useSignup";
 import MiniLoader from "../../Ui/MiniLoader";
@@ -137,20 +136,11 @@ function SignUp() {
           </div>
         </form>
 
-        <div className="flex items-center justify-between mt-4">
+        {/* <div className="flex items-center justify-between mt-4">
           <span className="w-1/5 border-b border-gray-300"></span>
           <p className="text-sm text-gray-500">Or sign up with</p>
           <span className="w-1/5 border-b border-gray-300"></span>
-        </div>
-
-        <div className="flex space-x-4 mt-4">
-          <button
-            className="flex-1 py-2 px-4 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-all"
-            disabled={isLoading}
-          >
-            <FaGithub className="inline mr-2" /> GitHub
-          </button>
-        </div>
+        </div> */}
 
         <p className="text-sm text-center mt-6 text-gray-600">
           Already have an account?{" "}

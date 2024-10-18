@@ -1,10 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Link } from "react-router-dom";
-import { FaGithub } from "react-icons/fa"; // Import icons
 import { useLogin } from "./useLogin";
 import { useState } from "react";
-import MiniLoader from "../../Ui/MiniLoader";
-import { loginWithProvider } from "../../Services/apiAuthentication";
+import Loader from "./../../Ui/Loader";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -68,7 +66,7 @@ function Login() {
             type="submit"
             className="w-full py-2 mt-4 text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-all"
           >
-            {isLoading ? <MiniLoader /> : "Login"}
+            {isLoading ? <Loader /> : "Login"}
           </button>
         </form>
 
@@ -76,15 +74,6 @@ function Login() {
           <span className="w-1/5 border-b border-gray-300"></span>
           <p className="text-sm text-gray-500">Or sign in with</p>
           <span className="w-1/5 border-b border-gray-300"></span>
-        </div>
-
-        <div className="flex mt-4">
-          <button
-            onClick={() => loginWithProvider("github")}
-            className="flex-1 py-2 px-4 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-all"
-          >
-            <FaGithub className="inline mr-2" /> GitHub
-          </button>
         </div>
 
         <p className="text-sm text-center mt-6 text-gray-600">
