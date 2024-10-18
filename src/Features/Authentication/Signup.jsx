@@ -136,12 +136,6 @@ function SignUp() {
           </div>
         </form>
 
-        {/* <div className="flex items-center justify-between mt-4">
-          <span className="w-1/5 border-b border-gray-300"></span>
-          <p className="text-sm text-gray-500">Or sign up with</p>
-          <span className="w-1/5 border-b border-gray-300"></span>
-        </div> */}
-
         <p className="text-sm text-center mt-6 text-gray-600">
           Already have an account?{" "}
           <Link to="/login" className="text-green-500 hover:underline">
