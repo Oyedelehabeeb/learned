@@ -14,8 +14,6 @@ function SideBar() {
   const fullname = user?.user_metadata?.fullname;
   const avatar = user?.user_metadata?.avatar;
 
-  console.log(fullname, avatar);
-
   const { logout } = useLogout();
 
   return (

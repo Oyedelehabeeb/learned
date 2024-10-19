@@ -6,14 +6,10 @@ import Loader from "./Loader";
 import { formatCurrency } from "./../Utils/helper";
 
 const CourseDetails = () => {
-  // const [isAddedToCart, setIsAddedToCart] = useState(false);
-  // const [isAddedToWishlist, setIsAddedToWishlist] = useState(false);
-
   const { courseId } = useParams();
 
   const { allCourses, isLoading } = useAllCourses();
 
-  // Find the course using the courseId from your tables
   const course = allCourses.find(
     (course) => course.courseId === Number(courseId)
   );
@@ -60,28 +56,23 @@ const CourseDetails = () => {
 
   return (
     <div className="max-w-6xl mx-auto p-8">
-      {/* Course Header */}
       <div className="mb-8">
         <h1 className="text-4xl text-center font-bold">{title}</h1>
       </div>
 
-      {/* Course Overview (Image, Rating, Price, and Instructor) */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
-        {/* Course Image */}
         <img
           src={image}
           alt={title}
           className="w-full h-auto object-cover rounded-md shadow-lg"
         />
 
-        {/* Course Details */}
         <div className="flex flex-col justify-between">
           <div>
             <h2 className="text-xl font-semibold mb-4">
               Instructor: {instructor}
             </h2>
 
-            {/* Rating */}
             <div className="flex items-center mb-4">
               <span className="text-lg font-semibold mr-2">Rating:</span>
               <span className="text-yellow-500 text-lg font-bold">
@@ -89,12 +80,10 @@ const CourseDetails = () => {
               </span>
             </div>
 
-            {/* Language */}
             <div className="mb-4">
               <h3 className="text-lg font-semibold">Language: {language}</h3>
             </div>
 
-            {/* Number of Students */}
             <div className="mb-4">
               <h3 className="text-lg font-semibold">
                 Students Enrolled: {student}

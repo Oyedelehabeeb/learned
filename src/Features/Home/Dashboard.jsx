@@ -3,20 +3,17 @@ import { Link } from "react-router-dom";
 function Dashboard() {
   return (
     <div className="min-h-screen bg-gray-100">
-      {/* Dashboard Header */}
       <header className="bg-gradient-to-r from-customGray to-darkGray py-6 text-white text-center">
         <h1 className="text-4xl font-bold">Welcome Student!</h1>
         <p className="text-xl mt-2">Explore your course categories below.</p>
       </header>
 
-      {/* Course Categories Section */}
       <section className="py-12 bg-white">
         <div className="container mx-auto">
           <h2 className="text-3xl font-semibold text-center mb-8">
             Course Categories
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Category Card 1: Development */}
             <div className="category-card bg-customGray p-6 rounded-lg shadow-md hover:shadow-xl transition-all text-center">
               <h3 className="text-lg font-semibold text-white">Development</h3>
               <p className="text-white mt-2">
@@ -29,7 +26,7 @@ function Dashboard() {
                 Explore
               </Link>
             </div>
-            {/* Category Card 2: Design */}
+
             <div className="category-card bg-customGray p-6 rounded-lg shadow-md hover:shadow-xl transition-all text-center">
               <h3 className="text-lg font-semibold text-white">Design</h3>
               <p className="text-white mt-2">
@@ -42,7 +39,7 @@ function Dashboard() {
                 Explore
               </Link>
             </div>
-            {/* Category Card 3: Marketing */}
+
             <div className="category-card bg-customGray p-6 rounded-lg shadow-md hover:shadow-xl transition-all text-center">
               <h3 className="text-lg font-semibold text-white">Marketing</h3>
               <p className="text-white mt-2">
@@ -55,7 +52,7 @@ function Dashboard() {
                 Explore
               </Link>
             </div>
-            {/* Category Card 4: Business */}
+
             <div className="category-card bg-customGray p-6 rounded-lg shadow-md hover:shadow-xl transition-all text-center">
               <h3 className="text-lg font-semibold text-white">Business</h3>
               <p className="text-white mt-2">
@@ -68,7 +65,7 @@ function Dashboard() {
                 Explore
               </Link>
             </div>
-            {/* Category Card 5: Health & Fitness */}
+
             <div className="category-card bg-customGray p-6 rounded-lg shadow-md hover:shadow-xl transition-all text-center">
               <h3 className="text-lg font-semibold text-white">
                 Health & Fitness
@@ -83,7 +80,7 @@ function Dashboard() {
                 Explore
               </Link>
             </div>
-            {/* Category Card 6: Accounting & Finance */}
+
             <div className="category-card bg-customGray p-6 rounded-lg shadow-md hover:shadow-xl transition-all text-center">
               <h3 className="text-lg font-semibold text-white">
                 Accounting & Finance
@@ -98,7 +95,7 @@ function Dashboard() {
                 Explore
               </Link>
             </div>
-            {/* Category Card 7: Teaching & Academics */}
+
             <div className="category-card bg-customGray p-6 rounded-lg shadow-md hover:shadow-xl transition-all text-center">
               <h3 className="text-lg font-semibold text-white">
                 Teaching & Academics

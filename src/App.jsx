@@ -54,6 +54,8 @@ import SignupPage from "./Pages/SignupPage";
 import LandingPage from "./Pages/LandingPage";
 import SettingsPage from "./Pages/SettingsPage";
 import ProtectedRoute from "./Ui/ProtectedRoute";
+import ForgotPasswordPage from "./Pages/ForgotPasswordPage";
+import UpdateUserPasswordPage from "./Pages/UpdateUserPasswordPage";
 
 function App() {
   const queryClient = new QueryClient({
@@ -71,6 +73,8 @@ function App() {
           <Routes>
             <Route path="login" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
+            <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+            <Route path="reset-password" element={<UpdateUserPasswordPage />} />
             <Route path="/" element={<LandingPage />} />
             <Route
               element={

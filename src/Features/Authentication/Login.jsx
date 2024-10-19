@@ -62,6 +62,13 @@ function Login() {
             />
           </div>
 
+          <p className="text-customGray">
+            Forgot password? {""}
+            <Link to="/forgot-password" className="text-blue-600">
+              Reset
+            </Link>
+          </p>
+
           <button
             type="submit"
             className="w-full py-2 mt-4 text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-all"
