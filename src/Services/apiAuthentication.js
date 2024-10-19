@@ -115,7 +115,7 @@ export async function loginWithProvider() {
 export async function sendResetPasswordLink(email) {
   const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
     // redirectTo: "http://localhost:5173/reset-password",
-    redirectTo: "https://the-learned.netlify.app/",
+    redirectTo: "https://the-learned.netlify.app/reset-password",
   });
   if (error) throw new Error(error.message);
   return data;
