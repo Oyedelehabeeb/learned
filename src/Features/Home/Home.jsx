@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Dashboard() {
+function Home() {
   return (
     <div className="min-h-screen bg-gray-100">
       <header className="bg-gradient-to-r from-customGray to-darkGray py-6 text-white text-center">
@@ -117,4 +117,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Home;
