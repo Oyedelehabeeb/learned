@@ -9,6 +9,9 @@ Meet Instructors: Users can meet different instructors and view their profiles a
 Testimonials: Read feedback from users about their learning experiences.
 Responsive Design: Optimized for both mobile and desktop views using Tailwind CSS.
 State Management: Handled using React Query for better data management and caching.
+
+Live link : https://the-learned.netlify.app/development/web-development
+
 Tech Stack
 The Learned app uses the following technologies:
 
