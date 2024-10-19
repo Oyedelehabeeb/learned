@@ -3,7 +3,6 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
-import WishListPage from "./pages/WishListPage";
 import CartPage from "./pages/CartPage";
 import MyLearningPage from "./pages/MyLearningPage";
 import DesignPage from "./pages/DesignPage";
@@ -56,6 +55,7 @@ import SettingsPage from "./Pages/SettingsPage";
 import ProtectedRoute from "./Ui/ProtectedRoute";
 import ForgotPasswordPage from "./Pages/ForgotPasswordPage";
 import UpdateUserPasswordPage from "./Pages/UpdateUserPasswordPage";
+import WishListPage from "./Pages/WishListPage";
 
 function App() {
   const queryClient = new QueryClient({

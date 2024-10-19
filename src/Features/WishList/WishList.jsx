@@ -4,31 +4,6 @@ import WishlistItems from "./WishlistItems";
 import Loader from "./../../Ui/Loader";
 import { Link } from "react-router-dom";
 
-// Sample Wishlist Data (You can replace this with your actual data source)
-// const sampleWishlist = [
-//   {
-//     courseId: 1,
-//     title: "JavaScript for Beginners",
-//     instructor: "John Doe",
-//     price: 29.99,
-//     imageUrl: "https://via.placeholder.com/150",
-//   },
-//   {
-//     courseId: 2,
-//     title: "React Masterclass",
-//     instructor: "Jane Smith",
-//     price: 49.99,
-//     imageUrl: "https://via.placeholder.com/150",
-//   },
-//   {
-//     courseId: 3,
-//     title: "Vue.js - The Complete Guide",
-//     instructor: "Mark Johnson",
-//     price: 39.99,
-//     imageUrl: "https://via.placeholder.com/150",
-//   },
-// ];
-
 function WishList() {
   const { wishlist, isLoading } = useWishlist();
 
@@ -36,7 +11,6 @@ function WishList() {
 
   return (
     <div className="container mx-auto p-6">
-      {/* Check if the wishlist is empty */}
       {wishlist?.length === 0 ? (
         <div className="flex flex-col items-center p-24  h-screen">
           <h2 className="text-2xl font-semibold">Your wishlist is empty.</h2>
