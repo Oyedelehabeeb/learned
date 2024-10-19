@@ -12,13 +12,21 @@ State Management: Handled using React Query for better data management and cachi
 
 Live link : https://the-learned.netlify.app/development/web-development
 
-Tech Stack
+Tech Stack:
+
 The Learned app uses the following technologies:
 
 React.js: Frontend framework for building the user interface
+
 React Router: Routing management for navigation between pages
+
 React Query: State management and data fetching library
+
 Tailwind CSS: Utility-first CSS framework for styling
+
 Supabase: Backend-as-a-Service (BaaS) for authentication and database management
+
 Framer Motion: Animation library for interactive transitions
+
 Netlify: Hosting and deployment platform
+
