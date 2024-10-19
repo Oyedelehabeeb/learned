@@ -2,14 +2,14 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import HomePage from "./pages/HomePage";
-import CartPage from "./pages/CartPage";
-import MyLearningPage from "./pages/MyLearningPage";
-import DesignPage from "./pages/DesignPage";
-import DevelopmentPage from "./pages/DevelopmentPage";
-import MarketingPage from "./pages/MarketingPage";
-import BusinessPage from "./pages/BusinessPage";
-import FitnessPage from "./pages/FitnessPage";
+import HomePage from "./Pages/HomePage";
+import CartPage from "./Pages/CartPage";
+import MyLearningPage from "./Pages/MyLearningPage";
+import DesignPage from "./Pages/DesignPage";
+import DevelopmentPage from "./Pages/DevelopmentPage";
+import MarketingPage from "./Pages/MarketingPage";
+import BusinessPage from "./Pages/BusinessPage";
+import FitnessPage from "./Pages/FitnessPage";
 
 import AppLayout from "./Ui/AppLayout";
 import WebDevelopmentPage from "./Pages/WebDevelopmentPage";
