@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useSignup } from "./useSignup";
-import MiniLoader from "../../Ui/MiniLoader";
+import Loader from "./../../Ui/Loader";
 
 function SignUp() {
   const { register, handleSubmit, formState, getValues, reset } = useForm();
@@ -123,7 +123,7 @@ function SignUp() {
               className="w-full py-2 mt-4 text-white bg-green-600 rounded-md hover:bg-green-700 transition-all"
               disabled={isLoading}
             >
-              {isLoading ? <MiniLoader /> : "Sign Up"}
+              {isLoading ? <Loader /> : "Sign Up"}
             </button>
             <button
               className="w-full py-2 mt-4 text-white bg-green-600 rounded-md hover:bg-green-700 transition-all"

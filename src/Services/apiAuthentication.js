@@ -96,26 +96,21 @@ export async function updateCurrentUser({ password, fullname, avatar }) {
   return updatedUser;
 }
 
-export async function loginWithProvider() {
-  try {
-    const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: "github",
-    });
-    console.log("Sign in result:", { data, error });
+export async function loginWithProvider(provider) {
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider: provider,
+  });
 
-    if (error) {
-      throw new Error(`Error signing up: ${error.message}`);
-    }
-  } catch (error) {
-    console.error("Error signing in with Provider:", error);
-    throw new Error("Failed to sign in with Provider");
+  if (error) {
+    throw new Error(`Error signing up: ${error.message}`);
   }
+  return data;
 }
 
 export async function sendResetPasswordLink(email) {
   const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
     // redirectTo: "http://localhost:5173/reset-password",
-    redirectTo: "https://the-learned.netlify.app/reset-password",
+    redirectTo: " https://learned-two.vercel.app/reset-password",
   });
   if (error) throw new Error(error.message);
   return data;

@@ -2,7 +2,9 @@
 import { Link } from "react-router-dom";
 import { useLogin } from "./useLogin";
 import { useState } from "react";
+import { FcGoogle } from "react-icons/fc";
 import Loader from "./../../Ui/Loader";
+import { loginWithProvider } from "../../Services/apiAuthentication";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -23,6 +25,7 @@ function Login() {
       }
     );
   }
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-darkGray px-4">
       <div className="w-full max-w-lg p-8 space-y-6 bg-white shadow-xl rounded-lg md:space-y-8">
@@ -63,7 +66,7 @@ function Login() {
           </div>
 
           <p className="text-customGray">
-            Forgot password? {""}
+            Forgot password?{" "}
             <Link to="/forgot-password" className="text-blue-600">
               Reset
             </Link>
@@ -76,6 +79,13 @@ function Login() {
             {isLoading ? <Loader /> : "Login"}
           </button>
         </form>
+
+        <button
+          className="w-full py-2 mt-2 flex items-center justify-center border border-gray-300 rounded-md hover:bg-gray-100 transition-all space-x-3"
+          onClick={() => loginWithProvider("google")}
+        >
+          <FcGoogle className="w-8 h-8" /> <span>Continue with Google</span>
+        </button>
 
         <p className="text-sm text-center mt-6 text-gray-600">
           Don't have an account?{" "}
