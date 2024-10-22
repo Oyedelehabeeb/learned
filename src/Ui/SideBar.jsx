@@ -12,6 +12,7 @@ import { useUser } from "../Features/Authentication/useUser";
 function SideBar() {
   const { user } = useUser();
   const fullname = user?.user_metadata?.fullname;
+  const fullName = user?.user_metadata?.full_name;
   const avatar = user?.user_metadata?.avatar;
 
   const { logout } = useLogout();
@@ -23,11 +24,13 @@ function SideBar() {
           <div className="w-16 h-16 rounded-full border-2 border-yellow-400 overflow-hidden">
             <img
               src={avatar ? avatar : "default-user.jpg"}
-              alt={fullname}
+              alt={fullname || "User"}
               className="w-full h-full object-cover"
             />
           </div>
-          <span className="ml-2 text-lg font-semibold">{fullname}</span>
+          <span className="ml-2 text-lg font-semibold">
+            {fullname ? fullname : fullName}
+          </span>
         </div>
 
         <NavLink

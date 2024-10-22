@@ -75,7 +75,7 @@ function App() {
             <Route path="/signup" element={<SignupPage />} />
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
             <Route path="reset-password" element={<UpdateUserPasswordPage />} />
-            <Route path="/" element={<LandingPage />} />
+            <Route path="/landing-page" element={<LandingPage />} />
             <Route
               element={
                 <ProtectedRoute>
@@ -83,7 +83,7 @@ function App() {
                 </ProtectedRoute>
               }
             >
-              <Route path="/dashboard" element={<HomePage />} />
+              <Route path="/" element={<HomePage />} />
               <Route path="/wishlist" element={<WishListPage />} />
               <Route path="/cart" element={<CartPage />} />
               <Route path="/settings" element={<SettingsPage />} />

@@ -36,7 +36,7 @@ function DataScience() {
     <div className="min-h-screen p-6 space-y-10">
       <div className="flex items-center justify-between">
         <Link
-          to={-1}
+          to="/development/development-hero"
           className="p-2 bg-gray-100 rounded-md hover:bg-gray-300 transition"
         >
           <FiArrowLeft />

@@ -38,7 +38,7 @@ function Anatomy() {
       {/* HEADER */}
       <div className="flex items-center justify-between">
         <Link
-          to={-1}
+          to="/academics/academics-hero"
           className="p-2 bg-gray-100 rounded-md hover:bg-gray-300 transition"
         >
           <FiArrowLeft />
