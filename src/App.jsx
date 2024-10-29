@@ -2,15 +2,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import HomePage from "./Pages/HomePage";
-import CartPage from "./Pages/CartPage";
-import MyLearningPage from "./Pages/MyLearningPage";
-import DesignPage from "./Pages/DesignPage";
-import DevelopmentPage from "./Pages/DevelopmentPage";
-import MarketingPage from "./Pages/MarketingPage";
-import BusinessPage from "./Pages/BusinessPage";
-import FitnessPage from "./Pages/FitnessPage";
-
 import AppLayout from "./Ui/AppLayout";
 import WebDevelopmentPage from "./Pages/WebDevelopmentPage";
 import MobileDevelopmentPage from "./Pages/MobileDevelopmentPage";
@@ -50,12 +41,33 @@ import ClinicalResearchPage from "./Pages/ClinicalResearchPage";
 import InstructorsDetails from "./Ui/InstructorsDetails";
 import LoginPage from "./Pages/LoginPage";
 import SignupPage from "./Pages/SignupPage";
-import LandingPage from "./Pages/LandingPage";
+// import LandingPage from "./Pages/LandingPage";
 import SettingsPage from "./Pages/SettingsPage";
 import ProtectedRoute from "./Ui/ProtectedRoute";
 import ForgotPasswordPage from "./Pages/ForgotPasswordPage";
 import UpdateUserPasswordPage from "./Pages/UpdateUserPasswordPage";
 import WishListPage from "./Pages/WishListPage";
+import { lazy, Suspense } from "react";
+import Loader from "./Ui/Loader";
+
+// import HomePage from "./Pages/HomePage";
+// import CartPage from "./Pages/CartPage";
+// import MyLearningPage from "./Pages/MyLearningPage";
+// import DesignPage from "./Pages/DesignPage";
+// import DevelopmentPage from "./Pages/DevelopmentPage";
+// import MarketingPage from "./Pages/MarketingPage";
+// import BusinessPage from "./Pages/BusinessPage";
+// import FitnessPage from "./Pages/FitnessPage";
+
+const HomePage = lazy(() => import("./Pages/HomePage"));
+const CartPage = lazy(() => import("./Pages/CartPage"));
+const DesignPage = lazy(() => import("./Pages/DesignPage"));
+const DevelopmentPage = lazy(() => import("./Pages/DevelopmentPage"));
+const MarketingPage = lazy(() => import("./Pages/MarketingPage"));
+const BusinessPage = lazy(() => import("./Pages/BusinessPage"));
+const FitnessPage = lazy(() => import("./Pages/FitnessPage"));
+const MyLearningPage = lazy(() => import("./Pages/MyLearningPage"));
+const LandingPage = lazy(() => import("./Pages/LandingPage"));
 
 function App() {
   const queryClient = new QueryClient({
@@ -70,130 +82,141 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools initialIsOpen={false} />
         <BrowserRouter>
-          <Routes>
-            <Route path="login" element={<LoginPage />} />
-            <Route path="/signup" element={<SignupPage />} />
-            <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-            <Route path="reset-password" element={<UpdateUserPasswordPage />} />
-            <Route path="/landing-page" element={<LandingPage />} />
-            <Route
-              element={
-                <ProtectedRoute>
-                  <AppLayout />
-                </ProtectedRoute>
-              }
-            >
-              <Route path="/" element={<HomePage />} />
-              <Route path="/wishlist" element={<WishListPage />} />
-              <Route path="/cart" element={<CartPage />} />
-              <Route path="/settings" element={<SettingsPage />} />
-              <Route path="/mylearning" element={<MyLearningPage />} />
-              <Route path="/design" element={<DesignPage />} />
-              <Route path="/development" element={<DevelopmentPage />} />
-              <Route path="/marketing" element={<MarketingPage />} />
-              <Route path="/business" element={<BusinessPage />} />
-              <Route path="/fitness" element={<FitnessPage />} />
-              <Route path="/finance" element={<FinancePage />} />
-              <Route path="/academics" element={<AcademicsPage />} />
+          <Suspense fallback={<Loader />}>
+            <Routes>
+              <Route path="login" element={<LoginPage />} />
+              <Route path="/signup" element={<SignupPage />} />
+              <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+              <Route
+                path="reset-password"
+                element={<UpdateUserPasswordPage />}
+              />
+              <Route path="/landing-page" element={<LandingPage />} />
+              <Route
+                element={
+                  <ProtectedRoute>
+                    <AppLayout />
+                  </ProtectedRoute>
+                }
+              >
+                <Route path="/" element={<HomePage />} />
+                <Route path="/wishlist" element={<WishListPage />} />
+                <Route path="/cart" element={<CartPage />} />
+                <Route path="/settings" element={<SettingsPage />} />
+                <Route path="/mylearning" element={<MyLearningPage />} />
+                <Route path="/design" element={<DesignPage />} />
+                <Route path="/development" element={<DevelopmentPage />} />
+                <Route path="/marketing" element={<MarketingPage />} />
+                <Route path="/business" element={<BusinessPage />} />
+                <Route path="/fitness" element={<FitnessPage />} />
+                <Route path="/finance" element={<FinancePage />} />
+                <Route path="/academics" element={<AcademicsPage />} />
 
-              <Route
-                path="/development/web-development"
-                element={<WebDevelopmentPage />}
-              />
-              <Route
-                path="/development/mobile-development"
-                element={<MobileDevelopmentPage />}
-              />
-              <Route
-                path="/development/game-development"
-                element={<GameDevelopmentPage />}
-              />
-              <Route
-                path="/development/data-science"
-                element={<DataSciencePage />}
-              />
-              <Route path="/design/web-design" element={<WebDesignPage />} />
-              <Route
-                path="/design/graphics-design-illustration"
-                element={<GraphicsDesignPage />}
-              />
-              <Route
-                path="/design/user-experience-design"
-                element={<UserExperiencePage />}
-              />
-              <Route
-                path="/marketing/digital-marketing"
-                element={<DigitalMarketingPage />}
-              />
-              <Route
-                path="/marketing/social-media-marketing"
-                element={<SocialMediaMarketingPage />}
-              />
-              <Route path="/marketing/branding" element={<BrandingPage />} />
-              <Route
-                path="/business/entrepreneur"
-                element={<EntrepreneurPage />}
-              />
-              <Route path="/business/sales" element={<SalesPage />} />
-              <Route path="/business/management" element={<ManagementPage />} />
-              <Route
-                path="/fitness/fitness-health"
-                element={<FitnessHealth />}
-              />
-              <Route path="/fitness/nutrition" element={<NutritionPage />} />
-              <Route
-                path="/fitness/mental-health"
-                element={<MentalHealthPage />}
-              />
-              <Route
-                path="/finance/cryptocurrency-blockchain"
-                element={<CryptocurrencyPage />}
-              />
-              <Route
-                path="/finance/investing-trading"
-                element={<InvestingPage />}
-              />
-              <Route
-                path="/finance/accounting-bookkeeping"
-                element={<AccountingPage />}
-              />
-              <Route
-                path="academics/clinical-research"
-                element={<ClinicalResearchPage />}
-              />
-              <Route
-                path="/academics/medical-coding"
-                element={<MedicalCodingPage />}
-              />
-              <Route path="/academics/anatomy" element={<AnatomyPage />} />
-              <Route
-                path="/academics/research-paper-writing"
-                element={<ResearchPage />}
-              />
-              <Route path="/courses/:courseId" element={<CourseDetails />} />
-              <Route
-                path="/instructors/:instructorId"
-                element={<InstructorsDetails />}
-              />
-              <Route path="/design/design-hero" element={<DesignHero />} />
-              <Route
-                path="/development/development-hero"
-                element={<DevelopmentHero />}
-              />
-              <Route
-                path="/marketing/marketing-hero"
-                element={<MarketingHero />}
-              />
-              <Route path="business/business-hero" element={<BusinessHero />} />
-              <Route path="fitness/fitness-hero" element={<FitnessHero />} />
-              <Route path="finance/finance-hero" element={<FinanceHero />} />
-              <Route
-                path="academics/academics-hero"
-                element={<AcademicsHero />}
-              />
-              <Route path="*" element={<PageNotFound />} />
-            </Route>
-          </Routes>
+                <Route
+                  path="/development/web-development"
+                  element={<WebDevelopmentPage />}
+                />
+                <Route
+                  path="/development/mobile-development"
+                  element={<MobileDevelopmentPage />}
+                />
+                <Route
+                  path="/development/game-development"
+                  element={<GameDevelopmentPage />}
+                />
+                <Route
+                  path="/development/data-science"
+                  element={<DataSciencePage />}
+                />
+                <Route path="/design/web-design" element={<WebDesignPage />} />
+                <Route
+                  path="/design/graphics-design-illustration"
+                  element={<GraphicsDesignPage />}
+                />
+                <Route
+                  path="/design/user-experience-design"
+                  element={<UserExperiencePage />}
+                />
+                <Route
+                  path="/marketing/digital-marketing"
+                  element={<DigitalMarketingPage />}
+                />
+                <Route
+                  path="/marketing/social-media-marketing"
+                  element={<SocialMediaMarketingPage />}
+                />
+                <Route path="/marketing/branding" element={<BrandingPage />} />
+                <Route
+                  path="/business/entrepreneur"
+                  element={<EntrepreneurPage />}
+                />
+                <Route path="/business/sales" element={<SalesPage />} />
+                <Route
+                  path="/business/management"
+                  element={<ManagementPage />}
+                />
+                <Route
+                  path="/fitness/fitness-health"
+                  element={<FitnessHealth />}
+                />
+                <Route path="/fitness/nutrition" element={<NutritionPage />} />
+                <Route
+                  path="/fitness/mental-health"
+                  element={<MentalHealthPage />}
+                />
+                <Route
+                  path="/finance/cryptocurrency-blockchain"
+                  element={<CryptocurrencyPage />}
+                />
+                <Route
+                  path="/finance/investing-trading"
+                  element={<InvestingPage />}
+                />
+                <Route
+                  path="/finance/accounting-bookkeeping"
+                  element={<AccountingPage />}
+                />
+                <Route
+                  path="academics/clinical-research"
+                  element={<ClinicalResearchPage />}
+                />
+                <Route
+                  path="/academics/medical-coding"
+                  element={<MedicalCodingPage />}
+                />
+                <Route path="/academics/anatomy" element={<AnatomyPage />} />
+                <Route
+                  path="/academics/research-paper-writing"
+                  element={<ResearchPage />}
+                />
+                <Route path="/courses/:courseId" element={<CourseDetails />} />
+                <Route
+                  path="/instructors/:instructorId"
+                  element={<InstructorsDetails />}
+                />
+                <Route path="/design/design-hero" element={<DesignHero />} />
+                <Route
+                  path="/development/development-hero"
+                  element={<DevelopmentHero />}
+                />
+                <Route
+                  path="/marketing/marketing-hero"
+                  element={<MarketingHero />}
+                />
+                <Route
+                  path="business/business-hero"
+                  element={<BusinessHero />}
+                />
+                <Route path="fitness/fitness-hero" element={<FitnessHero />} />
+                <Route path="finance/finance-hero" element={<FinanceHero />} />
+                <Route
+                  path="academics/academics-hero"
+                  element={<AcademicsHero />}
+                />
+                <Route path="*" element={<PageNotFound />} />
+              </Route>
+            </Routes>
+          </Suspense>
         </BrowserRouter>
         <Toaster
           position="top-center"

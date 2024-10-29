@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"; // Animation library
+import { motion } from "framer-motion";
 import { FaArrowRight, FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
