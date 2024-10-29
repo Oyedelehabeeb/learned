@@ -11,7 +11,7 @@ export function useLogin() {
     onSuccess: (user) => {
       toast.success("Logged in successfully");
       queryClient.setQueryData(["user", user.user]);
-      navigate("/dashboard");
+      navigate("/");
     },
     onError: (error) => {
       toast.error("Invalid credentials, please try again");

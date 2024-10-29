@@ -11,7 +11,7 @@ function Header() {
 
   return (
     <header className="flex justify-between items-center px-6 py-5  text-beige w-full h-16 fixed top-0 z-10 bg-darkGray shadow-sm">
-      <NavLink to="/dashboard" className="text-xl font-bold">
+      <NavLink to="/" className="text-xl font-bold">
         Learned
       </NavLink>
 

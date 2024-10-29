@@ -14,7 +14,7 @@ function WishList() {
       {wishlist?.length === 0 ? (
         <div className="flex flex-col items-center p-24  h-screen">
           <h2 className="text-2xl font-semibold">Your wishlist is empty.</h2>
-          <Link to="/dashboard" className="mt-4 text-blue-600 hover:underline">
+          <Link to="/" className="mt-4 text-blue-600 hover:underline">
             Continue Shopping
           </Link>
         </div>
