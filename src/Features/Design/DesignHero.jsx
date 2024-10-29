@@ -5,9 +5,6 @@ import { FaPaintBrush, FaLaptopCode, FaPenNib } from "react-icons/fa";
 function DesignHero() {
   return (
     <div className="relative bg-gradient-to-r from-customGray to-darkGray text-white py-16 px-8 text-center">
-      {/* Animated background design elements */}
-      {/* <div className="absolute inset-0 w-full h-full opacity-30 bg-no-repeat bg-center bg-[url('/path-to-your-creative-background-image.png')]"></div> */}
-
       {/* Main content with layered effect */}
       <div className="relative z-10">
         <h1 className="text-5xl font-bold mb-6 drop-shadow-md">

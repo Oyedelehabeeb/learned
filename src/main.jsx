@@ -9,7 +9,7 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ErrorBoundary
       FallbackComponent={ErrorFallBackComponent}
-      onReset={() => window.location.replace("/dashboard")}
+      onReset={() => window.location.replace("/")}
     >
       <App />
     </ErrorBoundary>

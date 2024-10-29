@@ -3,7 +3,7 @@ import { motion } from "framer-motion"; // Animation library
 import { FaArrowRight, FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const LandingPage = () => {
+function LandingPage() {
   return (
     <div className="bg-darkGray min-h-screen text-white">
       {/* Hero Section */}
@@ -36,7 +36,7 @@ const LandingPage = () => {
           className="md:w-1/2"
         >
           <img
-            src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&q=80&w=1528&auto=format&fit=crop"
+            src="landing-page-images.png"
             alt="Learning platform"
             className="rounded-xl shadow-xl h-[600px]"
           />
@@ -123,6 +123,6 @@ const LandingPage = () => {
       </footer>
     </div>
   );
-};
+}
 
 export default LandingPage;
