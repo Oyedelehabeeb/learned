@@ -36,7 +36,7 @@ function SignUp() {
               id="fullname"
               placeholder="Enter your full name"
               disabled={isLoading}
-              className="w-full px-4 py-2 mt-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full px-4 py-2 mt-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               {...register("fullname", { required: "this field is required" })}
             />
             {errors.fullname && (
@@ -55,7 +55,7 @@ function SignUp() {
               id="email"
               placeholder="Enter your email"
               disabled={isLoading}
-              className="w-full px-4 py-2 mt-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full px-4 py-2 mt-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               {...register("email", {
                 required: "this field is required",
                 pattern: {
@@ -80,7 +80,7 @@ function SignUp() {
               id="password"
               placeholder="Create a password"
               disabled={isLoading}
-              className="w-full px-4 py-2 mt-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full px-4 py-2 mt-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               {...register("password", {
                 required: "this field is required",
                 minLength: {
@@ -104,7 +104,7 @@ function SignUp() {
               id="confirmPassword"
               placeholder="Confirm password"
               disabled={isLoading}
-              className="w-full px-4 py-2 mt-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full px-4 py-2 mt-1 border rounded-md focus:outline-none focus:ring-2 focus:blue-green-500"
               {...register("confirmPassword", {
                 required: "this field is required",
                 validate: (value) =>
@@ -120,13 +120,13 @@ function SignUp() {
 
           <div className="flex gap-4">
             <button
-              className="w-full py-2 mt-4 text-white bg-green-600 rounded-md hover:bg-green-700 transition-all"
+              className="w-full py-2 mt-4 text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-all"
               disabled={isLoading}
             >
               {isLoading ? <Loader /> : "Sign Up"}
             </button>
             <button
-              className="w-full py-2 mt-4 text-white bg-green-600 rounded-md hover:bg-green-700 transition-all"
+              className="w-full py-2 mt-4 text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-all"
               type="reset"
               onClick={reset}
               disabled={isLoading}
@@ -138,7 +138,7 @@ function SignUp() {
 
         <p className="text-sm text-center mt-6 text-gray-600">
           Already have an account?{" "}
-          <Link to="/login" className="text-green-500 hover:underline">
+          <Link to="/login" className="text-blue-500 hover:underline">
             Login
           </Link>
         </p>
