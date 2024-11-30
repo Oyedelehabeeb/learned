@@ -10,7 +10,7 @@ Testimonials: Read feedback from users about their learning experiences.
 Responsive Design: Optimized for both mobile and desktop views using Tailwind CSS.
 State Management: Handled using React Query for better data management and caching.
 
-Live link : https://the-learned.netlify.app/development/web-development
+Live link : https://learned-website.vercel.app/
 
 Tech Stack:
 
