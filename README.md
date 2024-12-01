@@ -16,7 +16,7 @@ Tech Stack:
 
 The Learned app uses the following technologies:
 
-React.js: Frontend framework for building the user interface
+React: Frontend framework for building the user interface
 
 React Router: Routing management for navigation between pages
 
